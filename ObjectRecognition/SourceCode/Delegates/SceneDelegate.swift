@@ -8,15 +8,15 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = scene as? UIWindowScene else { return }
+        self.window = UIWindow(windowScene: windowScene)
+        startApp()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -46,7 +46,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
 
+extension SceneDelegate {
+    func startApp() {
+        let catalogueAndSearchViewModel = CatalogueAndSearchViewModel()
+        guard let catalogueAndSearchViewController = UIStoryboard(name: "Main",
+                                                             bundle: nil)
+                .instantiateViewController(identifier: "CatalogueAndSearchViewController") as? CatalogueAndSearchViewController else {
+            fatalError("CatalogueAndSearchViewController could not be created.")
+        }
+        catalogueAndSearchViewController.viewModel = catalogueAndSearchViewModel
+        catalogueAndSearchViewModel.viewDelegate = catalogueAndSearchViewController
+        window?.rootViewController = UINavigationController(rootViewController: catalogueAndSearchViewController)
+        window?.makeKeyAndVisible()
+    }
+}
