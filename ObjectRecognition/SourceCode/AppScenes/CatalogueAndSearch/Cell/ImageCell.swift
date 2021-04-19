@@ -2,7 +2,7 @@
 //  ImageCell.swift
 //  ObjectRecognition
 //
-//  Created by José Sancho on 19/4/21.
+//  Created by José Sancho on 18/4/21.
 //
 
 import UIKit

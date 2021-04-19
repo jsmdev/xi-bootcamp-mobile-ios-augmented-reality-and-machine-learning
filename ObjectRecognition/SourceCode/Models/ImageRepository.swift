@@ -14,10 +14,11 @@ class ImageRepository {
     private init() {
         loadData()
     }
-
+    
     private func loadData() {
-//        let imagesPrefixName = "jsmdev-test-image-"
-        testImages.append(TestImageModel(name: "jsmdev-test-image-080.jpeg"))
+        for index in 0 ..< 105 {
+            testImages.append(TestImageModel(name: "jsmdev-test-image-\(index).jpeg"))
+        }
     }
     
     func getData() -> [TestImageModel] {
