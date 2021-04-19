@@ -23,11 +23,16 @@ class CatalogueAndSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Image Catalogue"
+        configureViewController()
         configureCollectionView()
+        configureSearchController()
         viewModel.viewWasLoaded()
     }
 
+    private func configureViewController() {
+        title = "Catalogue"
+    }
+    
     private func configureCollectionView() {
         collectionView?.dataSource = self
         collectionView?.delegate = self
@@ -35,6 +40,27 @@ class CatalogueAndSearchViewController: UIViewController {
                                  forCellWithReuseIdentifier: "ImageCell")
     }
 
+    private func configureSearchController() {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search objects..."
+        navigationItem.searchController = searchController
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Search", style: .plain, target: self, action: #selector(searchInCatalogue))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Up", style: .plain, target: self, action: #selector(scrollUp))
+    }
+    
+    @objc private func searchInCatalogue() {
+        navigationItem.searchController?.isActive = true
+        navigationItem.searchController?.searchBar.becomeFirstResponder()
+    }
+    
+    @objc private func scrollUp() {
+        collectionView?.scrollToItem(at: IndexPath(item: 0, section: 0), at: .bottom, animated: true)
+        DispatchQueue.main.async { [weak self] in
+            self?.collectionView?.contentOffset = CGPoint(x: 0, y: -50)
+        }
+    }
 }
 
 extension CatalogueAndSearchViewController: UICollectionViewDataSource {
@@ -71,6 +97,20 @@ extension CatalogueAndSearchViewController: UICollectionViewDelegateFlowLayout {
 
 extension CatalogueAndSearchViewController: CatalogueAndSearchViewDelegate {
     func catalogueImagesLoaded() {
+        collectionView?.reloadData()
+    }
+}
+
+extension CatalogueAndSearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text?.lowercased() else { return }
+        let testImages = ImageRepository.shared.getData().map({ ImageCellViewModel(image: $0)})
+        viewModel.imageCellViewModels = testImages.filter({ (image) -> Bool in
+            return image.testImage?.name.lowercased().contains(text) ?? false
+        })
+        if viewModel.imageCellViewModels.count <= 0 {
+            viewModel.imageCellViewModels = testImages
+        }
         collectionView?.reloadData()
     }
 }

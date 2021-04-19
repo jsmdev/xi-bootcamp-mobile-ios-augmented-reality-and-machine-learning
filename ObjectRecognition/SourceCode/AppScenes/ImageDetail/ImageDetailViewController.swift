@@ -33,17 +33,20 @@ class ImageDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureViewController()
         viewModel.predict()
+    }
+
+    private func configureViewController() {
+        title = "Image Detail"
         detailImageView?.image = UIImage(data: viewModel.imageData)
-        
-        
         view.addSubview(labelExample)
         NSLayoutConstraint.activate([
             labelExample.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             labelExample.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32)
         ])
     }
-
+    
     func visualizeObservations(observations: [VNDetectedObjectObservation], objectsName: String) {
         DispatchQueue.main.async {
             guard let image = self.detailImageView?.image else { return }
