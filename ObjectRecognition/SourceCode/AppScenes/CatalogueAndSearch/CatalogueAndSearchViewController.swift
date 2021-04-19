@@ -56,9 +56,11 @@ class CatalogueAndSearchViewController: UIViewController {
     }
     
     @objc private func scrollUp() {
-        collectionView?.scrollToItem(at: IndexPath(item: 0, section: 0), at: .bottom, animated: true)
-        DispatchQueue.main.async { [weak self] in
-            self?.collectionView?.contentOffset = CGPoint(x: 0, y: -50)
+        if collectionView?.contentOffset.y ?? 0 >= 50 {
+            collectionView?.scrollToItem(at: IndexPath(item: 0, section: 0), at: .bottom, animated: true)
+            DispatchQueue.main.async { [weak self] in
+                self?.collectionView?.contentOffset = CGPoint(x: 0, y: -50)
+            }
         }
     }
 }
