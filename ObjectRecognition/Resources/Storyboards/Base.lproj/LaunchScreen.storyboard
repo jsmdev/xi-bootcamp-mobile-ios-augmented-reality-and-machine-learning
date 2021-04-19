@@ -27,8 +27,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="José Sancho" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgz-D8-yEO">
-                                <rect key="frame" x="152.5" y="162" width="109.5" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Object Recognition with ML" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgz-D8-yEO">
+                                <rect key="frame" x="102.5" y="162" width="209.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="José Sancho" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gav-Hf-Zt5">
+                                <rect key="frame" x="152.5" y="190.5" width="109.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -38,11 +44,13 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="b0k-YE-ZkT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="1EN-gt-rPS"/>
+                            <constraint firstItem="gav-Hf-Zt5" firstAttribute="top" secondItem="xgz-D8-yEO" secondAttribute="bottom" constant="8" id="Axy-tM-dsh"/>
                             <constraint firstItem="vRg-fd-qle" firstAttribute="top" secondItem="b0k-YE-ZkT" secondAttribute="bottom" constant="8" id="K7p-KZ-iNb"/>
                             <constraint firstItem="xgz-D8-yEO" firstAttribute="top" secondItem="vRg-fd-qle" secondAttribute="bottom" constant="8" id="WnB-he-rAb"/>
                             <constraint firstItem="b0k-YE-ZkT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="d70-Ne-2q1"/>
                             <constraint firstItem="xgz-D8-yEO" firstAttribute="centerX" secondItem="b0k-YE-ZkT" secondAttribute="centerX" id="fU9-Pt-mM5"/>
                             <constraint firstItem="vRg-fd-qle" firstAttribute="centerX" secondItem="b0k-YE-ZkT" secondAttribute="centerX" id="r26-il-Zhw"/>
+                            <constraint firstItem="gav-Hf-Zt5" firstAttribute="centerX" secondItem="b0k-YE-ZkT" secondAttribute="centerX" id="wsO-aS-9Hd"/>
                         </constraints>
                     </view>
                 </viewController>

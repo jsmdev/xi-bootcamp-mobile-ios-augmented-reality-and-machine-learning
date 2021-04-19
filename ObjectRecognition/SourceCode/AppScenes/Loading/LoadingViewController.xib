@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingViewController" customModule="ObjectRecognition" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XI Bootcamp Mobile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ki3-Re-LKC">
+                    <rect key="frame" x="130.5" y="104" width="153" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Superpoderes iOS -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRs-8j-njJ">
+                    <rect key="frame" x="125.5" y="133" width="163" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Object Recognition with ML" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MF9-ZQ-1qR">
+                    <rect key="frame" x="102.5" y="162" width="209.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="José Sancho" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9C-O8-Zh5">
+                    <rect key="frame" x="152.5" y="190.5" width="109.5" height="21.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="sTl-ib-26b">
+                    <rect key="frame" x="188.5" y="334.5" width="37" height="37"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="hRs-8j-njJ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Qui-Lj-VeP"/>
+                <constraint firstItem="D9C-O8-Zh5" firstAttribute="centerX" secondItem="ki3-Re-LKC" secondAttribute="centerX" id="SDi-OW-uiH"/>
+                <constraint firstItem="D9C-O8-Zh5" firstAttribute="top" secondItem="MF9-ZQ-1qR" secondAttribute="bottom" constant="8" id="ZTr-uN-7Zw"/>
+                <constraint firstItem="MF9-ZQ-1qR" firstAttribute="centerX" secondItem="ki3-Re-LKC" secondAttribute="centerX" id="aQe-kc-qzV"/>
+                <constraint firstItem="hRs-8j-njJ" firstAttribute="centerX" secondItem="ki3-Re-LKC" secondAttribute="centerX" id="cx5-zE-uUU"/>
+                <constraint firstItem="ki3-Re-LKC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="eJo-Nm-YgE"/>
+                <constraint firstItem="sTl-ib-26b" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-100" id="gUI-J1-taQ"/>
+                <constraint firstItem="sTl-ib-26b" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="nUX-nZ-tfr"/>
+                <constraint firstItem="hRs-8j-njJ" firstAttribute="top" secondItem="ki3-Re-LKC" secondAttribute="bottom" constant="8" id="s70-JU-bUc"/>
+                <constraint firstItem="MF9-ZQ-1qR" firstAttribute="top" secondItem="hRs-8j-njJ" secondAttribute="bottom" constant="8" id="wAr-yn-ith"/>
+            </constraints>
+            <point key="canvasLocation" x="126" y="153"/>
+        </view>
+    </objects>
+</document>

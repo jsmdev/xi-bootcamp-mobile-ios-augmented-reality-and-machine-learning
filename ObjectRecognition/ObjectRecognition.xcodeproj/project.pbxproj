@@ -128,6 +128,8 @@
 		907B6F0D262CBF0500E2C697 /* ImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B6F0C262CBF0500E2C697 /* ImageCellViewModel.swift */; };
 		90859113262D98F500396B07 /* YOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 90859112262D98F500396B07 /* YOLO.mlmodel */; };
 		90859116262D9CB900396B07 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90859115262D9CB900396B07 /* ImageDetailViewController.xib */; };
+		90DDD2BC262DE2E500EFFF31 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DDD2BA262DE2E500EFFF31 /* LoadingViewController.swift */; };
+		90DDD2BD262DE2E500EFFF31 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DDD2BB262DE2E500EFFF31 /* LoadingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -254,6 +256,8 @@
 		907B6F0C262CBF0500E2C697 /* ImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModel.swift; sourceTree = "<group>"; };
 		90859112262D98F500396B07 /* YOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLO.mlmodel; sourceTree = "<group>"; };
 		90859115262D9CB900396B07 /* ImageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
+		90DDD2BA262DE2E500EFFF31 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		90DDD2BB262DE2E500EFFF31 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +332,7 @@
 		907B6E07262CA20F00E2C697 /* AppScenes */ = {
 			isa = PBXGroup;
 			children = (
+				90DDD2BF262DE2EC00EFFF31 /* Loading */,
 				907B6E09262CA25D00E2C697 /* CatalogueAndSearch */,
 				907B6E0B262CA27200E2C697 /* ImageDetail */,
 			);
@@ -500,6 +505,15 @@
 			path = TestImages;
 			sourceTree = "<group>";
 		};
+		90DDD2BF262DE2EC00EFFF31 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				90DDD2BB262DE2E500EFFF31 /* LoadingViewController.xib */,
+				90DDD2BA262DE2E500EFFF31 /* LoadingViewController.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -629,6 +643,7 @@
 				907B6ED1262CBB7500E2C697 /* jsmdev-test-image-54.jpeg in Resources */,
 				907B6EDC262CBB7500E2C697 /* jsmdev-test-image-23.jpeg in Resources */,
 				907B6EEC262CBB7500E2C697 /* jsmdev-test-image-9.jpeg in Resources */,
+				90DDD2BD262DE2E500EFFF31 /* LoadingViewController.xib in Resources */,
 				907B6EB5262CBB7500E2C697 /* jsmdev-test-image-67.jpeg in Resources */,
 				907B6EA5262CBB7500E2C697 /* jsmdev-test-image-66.jpeg in Resources */,
 				907B6ECA262CBB7500E2C697 /* jsmdev-test-image-57.jpeg in Resources */,
@@ -688,6 +703,7 @@
 				907B6E0D262CA3B900E2C697 /* CatalogueAndSearchViewModel.swift in Sources */,
 				907B6DE7262C9DCD00E2C697 /* SceneDelegate.swift in Sources */,
 				907B6E30262CBA5E00E2C697 /* ImageDetailViewController.swift in Sources */,
+				90DDD2BC262DE2E500EFFF31 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

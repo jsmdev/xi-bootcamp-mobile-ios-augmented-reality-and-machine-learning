@@ -8,6 +8,8 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    static let shared = UIApplication.shared.connectedScenes
+        .first!.delegate as! SceneDelegate
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -50,10 +52,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 extension SceneDelegate {
     func startApp() {
-        let catalogueAndSearchViewModel = CatalogueAndSearchViewModel()
-        let catalogueAndSearchViewController = CatalogueAndSearchViewController(viewModel: catalogueAndSearchViewModel)
-        catalogueAndSearchViewModel.viewDelegate = catalogueAndSearchViewController
-        window?.rootViewController = UINavigationController(rootViewController: catalogueAndSearchViewController)
+//        let catalogueAndSearchViewModel = CatalogueAndSearchViewModel()
+//        let catalogueAndSearchViewController = CatalogueAndSearchViewController(viewModel: catalogueAndSearchViewModel)
+//        catalogueAndSearchViewModel.viewDelegate = catalogueAndSearchViewController
+//        window?.rootViewController = UINavigationController(rootViewController: catalogueAndSearchViewController)
+//        window?.makeKeyAndVisible()
+        let loadingViewController = LoadingViewController()
+        window?.rootViewController = UINavigationController(rootViewController: loadingViewController)
         window?.makeKeyAndVisible()
     }
 }
