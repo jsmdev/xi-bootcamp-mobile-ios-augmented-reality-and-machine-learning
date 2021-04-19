@@ -16,6 +16,11 @@ class ImageRepository {
     }
 
     private func loadData() {
+//        let imagesPrefixName = "jsmdev-test-image-"
+        testImages.append(TestImageModel(name: "jsmdev-test-image-080.jpeg"))
+    }
     
+    func getData() -> [TestImageModel] {
+        return testImages
     }
 }

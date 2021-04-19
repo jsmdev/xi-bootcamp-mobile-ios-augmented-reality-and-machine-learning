@@ -51,12 +51,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate {
     func startApp() {
         let catalogueAndSearchViewModel = CatalogueAndSearchViewModel()
-        guard let catalogueAndSearchViewController = UIStoryboard(name: "Main",
-                                                             bundle: nil)
-                .instantiateViewController(identifier: "CatalogueAndSearchViewController") as? CatalogueAndSearchViewController else {
-            fatalError("CatalogueAndSearchViewController could not be created.")
-        }
-        catalogueAndSearchViewController.viewModel = catalogueAndSearchViewModel
+        let catalogueAndSearchViewController = CatalogueAndSearchViewController(viewModel: catalogueAndSearchViewModel)
         catalogueAndSearchViewModel.viewDelegate = catalogueAndSearchViewController
         window?.rootViewController = UINavigationController(rootViewController: catalogueAndSearchViewController)
         window?.makeKeyAndVisible()
