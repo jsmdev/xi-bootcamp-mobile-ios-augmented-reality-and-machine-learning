@@ -126,6 +126,8 @@
 		907B6F08262CBB7500E2C697 /* jsmdev-test-image-49.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 907B6E9F262CBB7500E2C697 /* jsmdev-test-image-49.jpeg */; };
 		907B6F09262CBB7500E2C697 /* jsmdev-test-image-8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 907B6EA0262CBB7500E2C697 /* jsmdev-test-image-8.jpeg */; };
 		907B6F0D262CBF0500E2C697 /* ImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907B6F0C262CBF0500E2C697 /* ImageCellViewModel.swift */; };
+		90859113262D98F500396B07 /* YOLO.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 90859112262D98F500396B07 /* YOLO.mlmodel */; };
+		90859116262D9CB900396B07 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90859115262D9CB900396B07 /* ImageDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -250,6 +252,8 @@
 		907B6E9F262CBB7500E2C697 /* jsmdev-test-image-49.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jsmdev-test-image-49.jpeg"; sourceTree = "<group>"; };
 		907B6EA0262CBB7500E2C697 /* jsmdev-test-image-8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jsmdev-test-image-8.jpeg"; sourceTree = "<group>"; };
 		907B6F0C262CBF0500E2C697 /* ImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModel.swift; sourceTree = "<group>"; };
+		90859112262D98F500396B07 /* YOLO.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLO.mlmodel; sourceTree = "<group>"; };
+		90859115262D9CB900396B07 /* ImageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,9 +270,9 @@
 		9005D19D262D81A4006A415D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				907B6F0C262CBF0500E2C697 /* ImageCellViewModel.swift */,
-				9005D195262D7D8E006A415D /* ImageCell.swift */,
 				9005D196262D7D8E006A415D /* ImageCell.xib */,
+				9005D195262D7D8E006A415D /* ImageCell.swift */,
+				907B6F0C262CBF0500E2C697 /* ImageCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -303,6 +307,7 @@
 		907B6DFB262CA03D00E2C697 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				90859112262D98F500396B07 /* YOLO.mlmodel */,
 				907B6E33262CBAD100E2C697 /* AppConfiguration */,
 				907B6E32262CBAC300E2C697 /* Storyboards */,
 				907B6E37262CBB7500E2C697 /* TestImages */,
@@ -332,8 +337,8 @@
 		907B6E09262CA25D00E2C697 /* CatalogueAndSearch */ = {
 			isa = PBXGroup;
 			children = (
-				907B6DE8262C9DCD00E2C697 /* CatalogueAndSearchViewController.swift */,
 				9005D191262D7C07006A415D /* CatalogueAndSearchViewController.xib */,
+				907B6DE8262C9DCD00E2C697 /* CatalogueAndSearchViewController.swift */,
 				907B6E0C262CA3B900E2C697 /* CatalogueAndSearchViewModel.swift */,
 				9005D19D262D81A4006A415D /* Cell */,
 			);
@@ -343,8 +348,9 @@
 		907B6E0B262CA27200E2C697 /* ImageDetail */ = {
 			isa = PBXGroup;
 			children = (
-				907B6E2C262CBA4000E2C697 /* ImageDetailViewModel.swift */,
+				90859115262D9CB900396B07 /* ImageDetailViewController.xib */,
 				907B6E2F262CBA5E00E2C697 /* ImageDetailViewController.swift */,
+				907B6E2C262CBA4000E2C697 /* ImageDetailViewModel.swift */,
 			);
 			path = ImageDetail;
 			sourceTree = "<group>";
@@ -646,6 +652,7 @@
 				907B6EC5262CBB7500E2C697 /* jsmdev-test-image-36.jpeg in Resources */,
 				907B6EC6262CBB7500E2C697 /* jsmdev-test-image-20.jpeg in Resources */,
 				907B6EBE262CBB7500E2C697 /* jsmdev-test-image-1.jpeg in Resources */,
+				90859116262D9CB900396B07 /* ImageDetailViewController.xib in Resources */,
 				907B6EF7262CBB7500E2C697 /* jsmdev-test-image-68.jpeg in Resources */,
 				907B6F07262CBB7500E2C697 /* jsmdev-test-image-65.jpeg in Resources */,
 				907B6EBD262CBB7500E2C697 /* jsmdev-test-image-56.jpeg in Resources */,
@@ -677,6 +684,7 @@
 				907B6DE5262C9DCD00E2C697 /* AppDelegate.swift in Sources */,
 				907B6E13262CACA300E2C697 /* ImageRepository.swift in Sources */,
 				907B6E16262CAD0C00E2C697 /* TestImageModel.swift in Sources */,
+				90859113262D98F500396B07 /* YOLO.mlmodel in Sources */,
 				907B6E0D262CA3B900E2C697 /* CatalogueAndSearchViewModel.swift in Sources */,
 				907B6DE7262C9DCD00E2C697 /* SceneDelegate.swift in Sources */,
 				907B6E30262CBA5E00E2C697 /* ImageDetailViewController.swift in Sources */,

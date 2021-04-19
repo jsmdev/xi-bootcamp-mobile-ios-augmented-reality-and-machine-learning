@@ -52,7 +52,12 @@ extension CatalogueAndSearchViewController: UICollectionViewDataSource {
 
 extension CatalogueAndSearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.didSelectRow(at: indexPath)
+        guard let imageName = viewModel.imageCellViewModels[indexPath.row].testImage?.name,
+              let imageData = UIImage(named: imageName)?.pngData() else { return }
+        let imageDetailViewModel = ImageDetailViewModel(imageData: imageData)
+        let imageDetailViewController = ImageDetailViewController(viewModel: imageDetailViewModel)
+        imageDetailViewModel.viewDelegate = imageDetailViewController
+        navigationController?.pushViewController(imageDetailViewController, animated: true)
     }
 }
 
@@ -60,8 +65,6 @@ extension CatalogueAndSearchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let cellWidth = (UIScreen.main.bounds.width - 10 + 16 + 16) / 2
-//        let cellHeight = cellWidth
         return CGSize(width: 156, height: 156)
     }
 }

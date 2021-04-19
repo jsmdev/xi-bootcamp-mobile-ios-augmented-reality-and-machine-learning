@@ -34,8 +34,4 @@ extension CatalogueAndSearchViewModel {
         guard indexPath.row < imageCellViewModels.count else {return nil}
         return imageCellViewModels[indexPath.row]
     }
-    
-    func didSelectRow(at indexPath: IndexPath) {
-        print("didSelectRow at: \(indexPath)")
-    }
 }
