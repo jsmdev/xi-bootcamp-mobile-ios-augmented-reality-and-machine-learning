@@ -15,7 +15,7 @@ class ImageCell: UICollectionViewCell {
             guard let viewModel = viewModel else {return}
             viewModel.viewDelegate = self
             if let name = viewModel.testImage?.name {
-                imageLoaded(imageName: name)
+                didLoadImage(with: name)
             }
         }
     }
@@ -35,8 +35,8 @@ class ImageCell: UICollectionViewCell {
 }
 
 extension ImageCell: ImageCellViewDelegate {
-    func imageLoaded(imageName: String) {
-        if let image = UIImage(named: imageName) {
+    func didLoadImage(with name: String) {
+        if let image = UIImage(named: name) {
             testImageView?.image = image
         }
     }

@@ -57,11 +57,12 @@ class ImageDetailViewController: UIViewController {
             UIGraphicsBeginImageContextWithOptions(imageSize, true, 0)
            
             let graphicsContext = UIGraphicsGetCurrentContext()
-            image.draw(in: CGRect(origin: .zero, size: imageSize))
+            image.draw(in: CGRect(origin: .zero,
+                                  size: imageSize))
             graphicsContext?.saveGState()
             graphicsContext?.setLineJoin(.round)
-            graphicsContext?.setLineWidth(4.0)
-            graphicsContext?.setFillColor(red: 0, green: 1, blue: 0, alpha: 0.3)
+            graphicsContext?.setLineWidth(6.0)
+            graphicsContext?.setFillColor(red: 1, green: 1, blue: 0, alpha: 0.3)
             graphicsContext?.setStrokeColor(UIColor.green.cgColor)
             
             observations.forEach { (observation) in
@@ -70,7 +71,7 @@ class ImageDetailViewController: UIViewController {
                 graphicsContext?.addRect(observationBounds)
             }
             if objectsName.count == 0 {
-                self.labelExample.text = "No se han encontrado objetos"
+                self.labelExample.text = "Objects not found"
             } else {
                 self.labelExample.text = objectsName
             }

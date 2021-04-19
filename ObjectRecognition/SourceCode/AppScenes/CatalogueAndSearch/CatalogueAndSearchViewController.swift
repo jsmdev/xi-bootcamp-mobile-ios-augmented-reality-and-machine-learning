@@ -106,7 +106,7 @@ extension CatalogueAndSearchViewController: UISearchResultsUpdating {
         guard let text = searchController.searchBar.text?.lowercased() else { return }
         let testImages = ImageRepository.shared.getData().map({ ImageCellViewModel(image: $0)})
         viewModel.imageCellViewModels = testImages.filter({ (image) -> Bool in
-            return image.testImage?.name.lowercased().contains(text) ?? false
+            return image.testImage?.recognizedObjects.lowercased().contains(text) ?? false
         })
         if viewModel.imageCellViewModels.count <= 0 {
             viewModel.imageCellViewModels = testImages

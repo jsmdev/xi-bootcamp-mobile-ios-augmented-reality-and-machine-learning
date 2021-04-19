@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ImageCellViewDelegate: class {
-    func imageLoaded(imageName: String)
+    func didLoadImage(with name: String)
 }
 
 class ImageCellViewModel {
@@ -18,7 +18,7 @@ class ImageCellViewModel {
     init(image: TestImageModel) {
         testImage = image
         if let name = testImage?.name {
-            viewDelegate?.imageLoaded(imageName: name)
+            viewDelegate?.didLoadImage(with: name)
         }
     }
 }
