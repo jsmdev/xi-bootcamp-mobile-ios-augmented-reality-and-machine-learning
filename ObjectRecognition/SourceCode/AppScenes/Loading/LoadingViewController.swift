@@ -24,7 +24,9 @@ class LoadingViewController: UIViewController {
         let catalogueAndSearchViewController = CatalogueAndSearchViewController(viewModel: catalogueAndSearchViewModel)
         catalogueAndSearchViewModel.viewDelegate = catalogueAndSearchViewController
         if let window = SceneDelegate.shared.window {
-            window.rootViewController = UINavigationController(rootViewController: catalogueAndSearchViewController)
+            let navigationController = UINavigationController(rootViewController: catalogueAndSearchViewController)
+            navigationController.navigationBar.isTranslucent = false
+            window.rootViewController = navigationController
         }
     }
 }
