@@ -11,14 +11,7 @@ import Vision
 
 class ImageDetailViewController: UIViewController {
     @IBOutlet weak var detailImageView: UIImageView?
-    
-    lazy var labelExample: UILabel = {
-        let labelExample = UILabel()
-        labelExample.translatesAutoresizingMaskIntoConstraints = false
-        labelExample.backgroundColor = .gray
-        labelExample.text = "Analizando..."
-        return labelExample
-    }()
+    @IBOutlet weak var objectsLabel: UILabel!
     
     let viewModel: ImageDetailViewModel
     
@@ -40,11 +33,6 @@ class ImageDetailViewController: UIViewController {
     private func configureViewController() {
         title = "Image Detail"
         detailImageView?.image = UIImage(data: viewModel.imageData)
-        view.addSubview(labelExample)
-        NSLayoutConstraint.activate([
-            labelExample.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            labelExample.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32)
-        ])
     }
     
     func visualizeObservations(observations: [VNDetectedObjectObservation], objectsName: String) {
@@ -71,9 +59,9 @@ class ImageDetailViewController: UIViewController {
                 graphicsContext?.addRect(observationBounds)
             }
             if objectsName.count == 0 {
-                self.labelExample.text = "Objects not found"
+                self.objectsLabel.text = "Objects not found 😢"
             } else {
-                self.labelExample.text = objectsName
+                self.objectsLabel.text = objectsName
             }
             graphicsContext?.drawPath(using: CGPathDrawingMode.fillStroke)
             graphicsContext?.restoreGState()
